@@ -69,8 +69,8 @@ O changelog de Guilherme registra a implementação da página pública e do Des
 |---|---|---:|---|---|
 | G-12 | Abrir e integrar o PR do botão público/privado | P0 | Commit `512705e` entra na `stage` e a action é validada | A fazer |
 | G-13 | Integrar dados da aba Portfólio | P0 | Aba exibe trabalhos autorizados, com estados vazio, carregamento e erro | A fazer |
-| G-14 | Integrar dados da aba Tripulação | P0 | Aba exibe somente integrantes com consentimento e trata estados vazio/erro | A fazer |
-| G-15 | Adicionar testes automatizados da rota e de `setSpaceshipPublic` | P0 | Casos de sucesso, 404 e tentativa por não comandante rodam na CI | A fazer |
+| G-14 | Integrar dados da aba Tripulação | P1 | Aba exibe somente integrantes com consentimento e trata estados vazio/erro | A fazer |
+| G-15 | Adicionar testes automatizados da rota e de `setSpaceshipPublic` | P1 | Casos de sucesso, 404 e tentativa por não comandante rodam na CI | A fazer |
 | G-16 | Corrigir acentuação das especialidades | P1 | Nomes vêm de fonte traduzida ou mapeamento aprovado | A fazer |
 | G-17 | Definir destino final do botão “Fazer Proposta” | P2 | Fluxo ST-027 implementado ou limitação documentada para a entrega final | A fazer |
 | G-18 | Remover ou limitar o mock antes da entrega final | P1 | Mock não interfere em produção e sua finalidade fica documentada | A fazer |

@@ -1,6 +1,81 @@
-# MVP ou protótipo parcial — evidências e roteiro
+# MVP — implementado versus faltante
 
-O material didático de 11/10 exige uma versão mínima **funcional** para apresentar ao cliente. O relatório de Wesley registra CI, Sandbox, mocks e testes. O changelog de Guilherme registra a página pública na `stage`, com rota, campos, view, layout e Design System. Portfólio e Tripulação podem ser mostrados como interface parcial, deixando claro que ainda não possuem integração.
+Esta comparação usa como fonte principal a reunião com Pedro Antonio Silva em 06/10/2026, registrada em `../consulta_startellite/startellite.txt`. O estado da implementação vem do relatório de Wesley e do changelog de Guilherme.
+
+## Recorte pedido pelo cliente
+
+Pedro indicou duas entregas principais para a semana:
+
+1. **Orbitinho:** orientar o uso da plataforma, responder com precisão como realizar tarefas e indicar qual página acessar. A integração com a navegação existente por texto e voz era desejada. Consultas pessoais deveriam retornar somente dados do usuário autenticado (reunião, 30:32–35:31).
+2. **Página pública de Espaçonave:** uma primeira versão de portfólio compartilhável, com identidade da equipe, capa/banner, imagem de perfil, descrição e projetos ou missões, seguindo uma linguagem escura, azul e espacial (reunião, 37:15–43:03).
+
+As perguntas prontas na abertura do Orbitinho foram tratadas como bônus (32:23). O mapa de integrantes foi apresentado como exemplo criativo, sem caráter obrigatório (41:26). O fluxo completo de proposta não foi definido como parte do MVP nessa reunião.
+
+## Resumo do estado
+
+| Frente | Estado do MVP | Síntese |
+|---|---|---|
+| Página pública de Espaçonave | **Parcialmente implementada** | Estrutura pública, perfil, segurança e visual foram implementados; Portfólio e Tripulação ainda não estão integrados |
+| Orbitinho | **Faltante** | Os documentos fornecidos não comprovam respostas sobre a plataforma, consulta do próprio usuário ou navegação integrada |
+| CI, testes e Sandbox | **Suporte parcialmente pronto** | CI, mocks e testes foram implementados; o deploy do Sandbox continua bloqueado pela Vercel |
+
+Com base nas evidências atuais, o conjunto ainda deve ser apresentado como **protótipo parcial**, pois uma das duas frentes principais do cliente, o Orbitinho, não possui implementação comprovada.
+
+## Página pública de Espaçonave
+
+| Pedido do cliente | Estado | O que foi implementado | O que falta |
+|---|---|---|---|
+| Página pública compartilhável | Implementado na `stage` | Rota SSR `/spaceships/[slug]`, canonical, OpenGraph, Twitter Card e JSON-LD; commit `e0974a9` | Anexar URL de homologação e captura da versão executada |
+| Capa/banner e imagem de perfil | Implementado na `stage` | Layout com capa e avatar, ajustes nos commits `005c7ba` e `ba9dad7` | Confirmar visualmente com captura da demonstração |
+| Nome, descrição e identidade da equipe | Implementado na `stage` | Nome, localização, números, apresentação e especialidades | Corrigir acentuação das especialidades e validar o texto final |
+| Visual escuro, azul e espacial | Parcialmente comprovado | Página segue o guia visual e possui temas claro/escuro; Design System no commit `610e9b9` | Captura ou demonstração que comprove azul, elementos espaciais e consistência visual pedidos pelo cliente |
+| Dados públicos seguros | Implementado | Campos `is_public` e `slug`, view `public_spaceship_profiles`, lista branca, 404 uniforme e restrição de imagens ao Storage | Anexar execução dos testes e validar os campos finais com o cliente |
+| Ativação pública/privada pelo comandante | Implementado fora da `stage` | Branch `feat/st-019-spaceship-public-toggle`, commit `512705e`, com autorização por `commander_id` | Abrir PR, integrar à `stage` e validar; até isso ocorrer, a ativação depende do banco ou do mock |
+| Projetos e missões no portfólio | Interface sem integração | Aba Portfólio foi criada | Integrar dados reais autorizados, anonimizar clientes e tratar carregamento, vazio e erro |
+| Integrantes da Espaçonave | Interface sem integração | Aba Tripulação foi criada | Integrar somente integrantes com consentimento e tratar estados vazio e erro |
+| Botão “Fazer Proposta” | Provisório | Botão leva a `/register` | Implementar o fluxo ST-027 ou documentar claramente a limitação |
+| Mapa/localização de membros | Não implementado | Localização básica aparece no perfil | Item criativo opcional; não bloqueia o MVP definido na reunião |
+
+## Orbitinho
+
+| Pedido do cliente | Estado | Evidência encontrada | O que falta |
+|---|---|---|---|
+| Responder com precisão como usar a plataforma | Faltante | Nenhuma implementação foi registrada nos relatórios | Criar base revisada de respostas sobre projetos, Espaçonaves, épicos e fluxos da plataforma |
+| Indicar qual página acessar para cada ação | Faltante | Nenhuma demonstração ou commit foi informado | Mapear intenções, páginas suportadas e respostas para destinos não encontrados ou ambíguos |
+| Navegação por texto | Faltante | A reunião informa que a mudança de rota já existia, mas não há evidência de integração | Conectar comandos digitados ao mecanismo existente e validar rotas prioritárias |
+| Navegação por voz | Faltante | Não há evidência técnica fornecida | Reutilizar as mesmas intenções do texto; falha de reconhecimento não pode abrir uma rota errada |
+| Consultar informações do próprio usuário | Faltante | Não há implementação ou teste registrado | Validar identidade no servidor e limitar projetos, pedidos e novidades ao usuário autenticado |
+| Recusar consulta sobre outras pessoas | Faltante | Requisito definido na reunião, sem evidência de teste | Adicionar autorização e teste de tentativa de acesso a dados de terceiros |
+| Perguntas sugeridas na abertura | Não implementado; bônus | Cliente classificou como bônus em 32:23 | Pode ser adiado sem bloquear o MVP |
+
+## Infraestrutura e qualidade que sustentam o MVP
+
+| Item | Estado | Observação |
+|---|---|---|
+| CI com lint, typecheck, testes e build | Relatado como implementado | Wesley ainda deve anexar PR, commit e execução completa da CI |
+| Testes da superfície pública | Relatado como implementado | Relatório informa 36 testes aprovados, incluindo privacidade e anonimização |
+| Mock sem produção | Implementado | Permite demonstração local; deve permanecer desativado em produção e ser removido ou delimitado depois |
+| Sandbox | Bloqueado externamente | Deploy pode falhar com `User not found (404)`; é necessário confirmar token, organização e projeto Vercel |
+| Testes da rota e do botão público/privado | Faltante | O changelog informa ausência de testes automatizados para a rota e `setSpaceshipPublic` |
+
+## O que falta para considerar o MVP completo
+
+### P0 — necessário antes da demonstração
+
+1. Implementar o Orbitinho para responder como usar a plataforma e indicar páginas, que foi o objetivo explícito da semana em 35:16.
+2. Garantir que consultas relacionadas ao usuário sejam autorizadas no servidor e não exponham dados de terceiros.
+3. Abrir e integrar o PR do controle público/privado da Espaçonave.
+4. Integrar a aba Portfólio com projetos ou missões autorizados e anonimizados.
+5. Anexar uma execução reproduzível: URL do Sandbox ou instruções locais, commits demonstrados e capturas.
+6. Executar a regressão integrada e registrar o aceite funcional de Victor.
+
+### P1 — importante, mas pode ser declarado como limitação
+
+1. Integrar Tripulação com consentimento.
+2. Integrar navegação por voz; a reunião aceita o foco principal em respostas corretas e trata a integração de rota como ideal.
+3. Corrigir acentuação das especialidades.
+4. Adicionar testes automatizados da rota pública e de `setSpaceshipPublic`.
+5. Resolver o deploy da Vercel para apresentar a versão no Sandbox.
 
 ## Evidências a anexar
 
@@ -10,7 +85,7 @@ O material didático de 11/10 exige uma versão mínima **funcional** para apres
 | URL de homologação ou instruções de execução | Pendente |
 | Versão ou commit demonstrado | Pendente |
 | Contas de teste fictícias, se necessárias | Pendente; não registrar senhas |
-| Captura ou vídeo do Orbitinho | Pendente |
+| Captura ou vídeo do Orbitinho | Pendente; não há implementação comprovada |
 | Captura ou vídeo da página pública | Pendente de anexar; página está relatada como integrada à `stage` |
 | Resultado da revisão de privacidade/autorização | Changelog registra view pública e 404 uniforme; Wesley relata 36 testes |
 | Data, apresentador e aceite do cliente | Pendente |
@@ -18,8 +93,8 @@ O material didático de 11/10 exige uma versão mínima **funcional** para apres
 ## Roteiro curto para a revisão
 
 1. Mostrar o estado do produto e declarar quais fluxos estão realmente disponíveis.
-2. Fazer uma pergunta pública sobre a plataforma ao Orbitinho; verificar se a resposta corresponde à fonte aprovada.
-3. Pedir um destino por texto e, se houver suporte, por voz; observar a rota aberta ou o tratamento seguro de ambiguidade.
+2. Se o Orbitinho for implementado, fazer uma pergunta pública sobre a plataforma e verificar se a resposta corresponde à fonte aprovada. Caso contrário, declarar a frente como pendente.
+3. Se houver integração, pedir um destino por texto e, se houver suporte, por voz; observar a rota aberta ou o tratamento seguro de ambiguidade.
 4. Abrir uma Espaçonave pública com dados autorizados; mostrar capa e perfil. Mostrar Portfólio e Tripulação como abas ainda sem integração.
 5. Abrir um slug inexistente ou privado e verificar que não mostra dados internos.
 6. Encerrar com as pendências, o backlog atualizado e o que cabe até a entrega final.

@@ -16,7 +16,7 @@ Os arquivos disponíveis da Entrega 1 e a reunião com Pedro Antonio Silva em 06
 
 | Item exigido | Documento ou evidência | Situação |
 |---|---|---|
-| MVP/protótipo parcial funcional | [MVP e roteiro de demonstração](docs/MVP_E_DEMONSTRACAO.md) | Evidência técnica pendente |
+| MVP/protótipo parcial funcional | [Implementado versus faltante no MVP](docs/MVP_E_DEMONSTRACAO.md) | Espaçonave parcial; Orbitinho faltante |
 | README atualizado | Este arquivo | Preparado para a Entrega 2 |
 | Backlog atualizado | [Backlog replanejado](docs/BACKLOG_ENTREGAVEL_2.md) | Redistribuído entre Wesley e Guilherme |
 | Funcionalidades e critérios de aceite | [Aceite funcional](docs/FUNCIONALIDADES_E_ACEITE.md) | Implementações registradas; Portfólio e Tripulação parciais |
