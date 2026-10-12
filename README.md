@@ -12,16 +12,17 @@ Este repositório reúne a documentação e as evidências da segunda entrega do
 
 ## Situação documentada
 
-Os arquivos disponíveis da Entrega 1 e a reunião com Pedro Antonio Silva em 06/10/2026 comprovam prioridades e decisões de escopo. O relatório entregue por Wesley documenta alterações em CI, Sandbox, mocks, testes, documentação e segurança. Os links de PR, commits e execuções da CI ainda precisam ser anexados. A frente de Espaçonaves permanece pendente de preenchimento por Guilherme antes do aceite.
+Os arquivos disponíveis da Entrega 1 e a reunião com Pedro Antonio Silva em 06/10/2026 comprovam prioridades e decisões de escopo. O relatório entregue por Wesley documenta alterações em CI, Sandbox, mocks, testes, documentação e segurança. O changelog de Guilherme registra a implementação da página pública, campos, view, Design System e controle de visibilidade. As abas Portfólio e Tripulação foram criadas, mas ainda não possuem integração.
 
 | Item exigido | Documento ou evidência | Situação |
 |---|---|---|
 | MVP/protótipo parcial funcional | [MVP e roteiro de demonstração](docs/MVP_E_DEMONSTRACAO.md) | Evidência técnica pendente |
 | README atualizado | Este arquivo | Preparado para a Entrega 2 |
 | Backlog atualizado | [Backlog replanejado](docs/BACKLOG_ENTREGAVEL_2.md) | Redistribuído entre Wesley e Guilherme |
-| Funcionalidades e critérios de aceite | [Aceite funcional](docs/FUNCIONALIDADES_E_ACEITE.md) | Relatório de Wesley registrado; Espaçonaves pendente |
+| Funcionalidades e critérios de aceite | [Aceite funcional](docs/FUNCIONALIDADES_E_ACEITE.md) | Implementações registradas; Portfólio e Tripulação parciais |
 | Feedback e alterações | [Feedback do cliente](docs/FEEDBACK_CLIENTE.md) | Reunião de 06/10 registrada |
 | Modificações de Wesley | [Relatório de modificações](docs/RELATORIO_MODIFICACOES_WESLEY.md) | Alterações relatadas; links técnicos pendentes |
+| Modificações de Guilherme | [Changelog](docs/CHANGELOG_GUILHERME.md) | Página pública implementada; abas ainda sem integração |
 
 ## Projeto e recorte para 11/10
 
@@ -39,7 +40,7 @@ O plano anterior distribuía entregas de homologação, CI, página pública e O
 
 ## Responsabilidades atuais
 
-A equipe técnica restante é formada por Wesley Lima Silva e Guilherme Kenzo Taba Nakamura. Wesley concentra CI, Sandbox, segurança, testes, backend e autorização do Orbitinho. Guilherme concentra a frente de Espaçonaves, a interface do Orbitinho e as evidências visuais. Os dois compartilham integração, regressão e preparação da demonstração.
+A equipe técnica restante é formada por Wesley Lima Silva e Guilherme Kenzo Taba Nakamura. Wesley concentra CI, Sandbox, segurança, testes, backend e autorização do Orbitinho. Guilherme implementou a página pública de Espaçonaves e concentra a integração pendente de Portfólio e Tripulação, a interface do Orbitinho e as evidências visuais. Os dois compartilham integração, regressão e preparação da demonstração.
 
 Victor Barbosa Viana permanece como Product Owner e Scrum Master, responsável por priorização, alinhamento, facilitação e aceite funcional, sem implementação. Pedro Pereira e Thiago Brasileiro de Sousa foram retirados das atribuições técnicas do novo backlog.
 
@@ -52,4 +53,5 @@ Antes da apresentação, a equipe deve adicionar links de PRs, commits ou ambien
 - Reunião com Pedro Antonio Silva e Victor Barbosa Viana em 06/10/2026, transcrita localmente em `consulta_startellite/startellite.txt`. A transcrição bruta não foi copiada para este repositório por conter dados de reunião.
 - Documentos da Entrega 1 em `consulta_startellite/docs/`, especialmente `REQUISITOS.md`, `BACKLOG.md`, `ALINHAMENTO_CLIENTE.md` e `DEFINITION_OF_DONE.md`.
 - [Relatório de modificações de Wesley](docs/RELATORIO_MODIFICACOES_WESLEY.md), copiado do arquivo fornecido pela equipe.
+- [Changelog de Guilherme](docs/CHANGELOG_GUILHERME.md), consolidado a partir do arquivo fornecido pela equipe.
 - [Orientações oficiais de entregáveis da Insper Code Jr.](https://inspercodejr.github.io/material-didatico-26-2/reunioes/#1110-entrega-intermediaria-2-marco-da-metade-do-projeto).

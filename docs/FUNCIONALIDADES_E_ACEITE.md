@@ -1,6 +1,6 @@
 # Funcionalidades e critérios de aceite
 
-Este registro acompanha o requisito de listar funcionalidades concluídas e seus critérios. O relatório de Wesley registra alterações e validações técnicas, mas os links de PR, commits e execuções da CI ainda precisam ser anexados. A parte de Espaçonaves permanece pendente de preenchimento por Guilherme, mesmo quando o relatório descreve uma base técnica relacionada à frente.
+Este registro acompanha o requisito de listar funcionalidades concluídas e seus critérios. O relatório de Wesley registra validações técnicas; o changelog de Guilherme registra branches e commits da página pública. Portfólio e Tripulação possuem interface, mas continuam sem integração.
 
 | Funcionalidade candidata | Critérios mínimos para marcar como concluída | Evidência | Resultado |
 |---|---|---|---|
@@ -12,9 +12,12 @@ Este registro acompanha o requisito de listar funcionalidades concluídas e seus
 | Orbitinho: navegação por texto | Comando para destino acordado abre a rota correta; comando inválido não navega | Pendente: PR/commit e demonstração | A fazer — Guilherme |
 | Orbitinho: navegação por voz | Comando de voz usa os mesmos destinos do texto quando o navegador permite; falha de reconhecimento não navega | Pendente: vídeo ou demonstração em navegador compatível | A fazer — Guilherme |
 | Orbitinho: consulta pessoal | A identidade é validada no servidor; só dados do próprio usuário são retornados; tentativa de consultar terceiros é negada | Pendente: revisão de autorização e demonstração com contas de teste | A fazer — Wesley |
-| Espaçonave: página pública | URL por slug apresenta capa, perfil, descrição e competências com identidade escura/azul; funciona em desktop e mobile | Guilherme deve preencher URL, PR/commit, capturas e limitações | Pendente de preenchimento |
-| Espaçonave: privacidade | Perfil privado/inexistente não mostra dados; página usa somente lista branca; clientes e tripulantes aparecem apenas com consentimento | Guilherme deve preencher integração e evidências; relatório de Wesley descreve a base técnica | Pendente de preenchimento |
-| Espaçonave: portfólio e tripulação | Trabalhos e membros autorizados aparecem; estados vazio/erro são compreensíveis; teclado percorre os controles | Guilherme deve preencher demonstração, consentimento e acessibilidade | Pendente de preenchimento |
+| Espaçonave: página pública | URL por slug apresenta capa, perfil, descrição e competências; perfil inválido ou privado retorna 404 uniforme | Commits `e0974a9`, `005c7ba`, `ba9dad7`; merge `7c08c06` na `stage` | Implementado |
+| Espaçonave: campos e view pública | `is_public` e `slug` existem; view expõe somente contrato aprovado e tabelas base permanecem fechadas | Commits `f6edeac` e `eeb58da`; view respondeu 200 com chave anônima | Implementado |
+| Espaçonave: controle público/privado | Somente comandante altera visibilidade; endereço público aparece em modo leitura | Commit `512705e`; falta PR para `stage` | Implementado, aguardando integração |
+| Espaçonave: Portfólio | Aba apresenta trabalhos autorizados e estados vazio, carregamento e erro | Interface criada; integração de dados ainda ausente | Parcial — sem integração |
+| Espaçonave: Tripulação | Aba apresenta somente membros autorizados e trata estados vazio/erro | Interface criada; integração de dados ainda ausente | Parcial — sem integração |
+| Design System | Página usa Button, Card, Badge e tokens; Tabs permite teclado | Commit `610e9b9`, já na `stage` | Implementado parcialmente; componentes restantes seguem pendentes |
 
 ## Registro de aceite a preencher pela equipe
 
