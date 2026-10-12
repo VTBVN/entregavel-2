@@ -18,7 +18,8 @@ Os arquivos disponíveis da Entrega 1 e a reunião com Pedro Antonio Silva em 06
 |---|---|---|
 | MVP/protótipo parcial funcional | [Implementado versus faltante no MVP](docs/MVP_E_DEMONSTRACAO.md) | Espaçonave parcial; Orbitinho faltante |
 | README atualizado | Este arquivo | Preparado para a Entrega 2 |
-| Backlog atualizado | [Backlog replanejado](docs/BACKLOG_ENTREGAVEL_2.md) | Redistribuído entre Wesley e Guilherme |
+| Backlog da Entrega 2 | [Backlog intermediário](docs/BACKLOG_ENTREGAVEL_2.md) | Histórico do marco intermediário |
+| Backlog da entrega final | [Backlog final replanejado](docs/BACKLOG_ENTREGA_FINAL.md) | Wesley e Guilherme com maior carga; Pedro em revisão e Orbitinho |
 | Funcionalidades e critérios de aceite | [Aceite funcional](docs/FUNCIONALIDADES_E_ACEITE.md) | Implementações registradas; Portfólio e Tripulação parciais |
 | Feedback e alterações | [Feedback do cliente](docs/FEEDBACK_CLIENTE.md) | Reunião de 06/10 registrada |
 | Modificações de Wesley | [Relatório de modificações](docs/RELATORIO_MODIFICACOES_WESLEY.md) | Alterações relatadas; links técnicos pendentes |
@@ -40,9 +41,9 @@ O plano anterior distribuía entregas de homologação, CI, página pública e O
 
 ## Responsabilidades atuais
 
-A equipe técnica restante é formada por Wesley Lima Silva e Guilherme Kenzo Taba Nakamura. Wesley concentra CI, Sandbox, segurança, testes, backend e autorização do Orbitinho. Guilherme implementou a página pública de Espaçonaves e concentra a integração pendente de Portfólio e Tripulação, a interface do Orbitinho e as evidências visuais. Os dois compartilham integração, regressão e preparação da demonstração.
+A equipe técnica da entrega final é formada por Wesley Lima Silva, Guilherme Kenzo Taba Nakamura e Pedro Pereira. Wesley concentra homologação, CI, backend, segurança, testes e deploy. Guilherme concentra Espaçonaves, proposta, frontend do Orbitinho, Design System e experiência. Pedro retorna com menos tarefas, voltadas à arquitetura e ao conhecimento do Orbitinho, revisão de segurança e revisão do legado. A distribuição completa está no [backlog da entrega final](docs/BACKLOG_ENTREGA_FINAL.md).
 
-Victor Barbosa Viana permanece como Product Owner e Scrum Master, responsável por priorização, alinhamento, facilitação e aceite funcional, sem implementação. Pedro Pereira e Thiago Brasileiro de Sousa foram retirados das atribuições técnicas do novo backlog.
+Victor Barbosa Viana permanece como Product Owner e Scrum Master, responsável por priorização, alinhamento, facilitação e aceite funcional, sem implementação. Thiago Brasileiro de Sousa permanece sem atribuição no backlog atual.
 
 ## Como completar as evidências
 
