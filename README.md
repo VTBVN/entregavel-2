@@ -1,6 +1,6 @@
 # Startellite — Entrega intermediária 2
 
-**Marco de 11/10/2026 · Insper Code Jr. · semestre 2026.2**
+**Marco de 12/10/2026 · Insper Code Jr. · semestre 2026.2**
 
 Este repositório reúne a documentação e as evidências da segunda entrega do case Startellite. O [material didático da Insper Code Jr.](https://inspercodejr.github.io/material-didatico-26-2/reunioes/#1110-entrega-intermediaria-2-marco-da-metade-do-projeto) pede:
 
@@ -12,15 +12,16 @@ Este repositório reúne a documentação e as evidências da segunda entrega do
 
 ## Situação documentada
 
-Os arquivos disponíveis da Entrega 1 e a reunião com Pedro Antonio Silva em 06/10/2026 comprovam **prioridades e decisões de escopo**, mas não comprovam que as funcionalidades foram implementadas ou aceitas. Por isso, o status técnico permanece **a confirmar com a equipe**. Este repositório não contém código do produto e não atribui conclusão sem evidência.
+Os arquivos disponíveis da Entrega 1 e a reunião com Pedro Antonio Silva em 06/10/2026 comprovam prioridades e decisões de escopo. O relatório entregue por Wesley documenta alterações em CI, Sandbox, mocks, testes, documentação e segurança. Os links de PR, commits e execuções da CI ainda precisam ser anexados. A frente de Espaçonaves permanece pendente de preenchimento por Guilherme antes do aceite.
 
 | Item exigido | Documento ou evidência | Situação |
 |---|---|---|
 | MVP/protótipo parcial funcional | [MVP e roteiro de demonstração](docs/MVP_E_DEMONSTRACAO.md) | Evidência técnica pendente |
 | README atualizado | Este arquivo | Preparado para a Entrega 2 |
-| Backlog atualizado | [Backlog da Entrega 2](docs/BACKLOG_ENTREGAVEL_2.md) | Priorizado; progresso a confirmar |
-| Funcionalidades e critérios de aceite | [Aceite funcional](docs/FUNCIONALIDADES_E_ACEITE.md) | Critérios definidos; conclusão a confirmar |
+| Backlog atualizado | [Backlog replanejado](docs/BACKLOG_ENTREGAVEL_2.md) | Redistribuído entre Wesley e Guilherme |
+| Funcionalidades e critérios de aceite | [Aceite funcional](docs/FUNCIONALIDADES_E_ACEITE.md) | Relatório de Wesley registrado; Espaçonaves pendente |
 | Feedback e alterações | [Feedback do cliente](docs/FEEDBACK_CLIENTE.md) | Reunião de 06/10 registrada |
+| Modificações de Wesley | [Relatório de modificações](docs/RELATORIO_MODIFICACOES_WESLEY.md) | Alterações relatadas; links técnicos pendentes |
 
 ## Projeto e recorte para 11/10
 
@@ -36,9 +37,11 @@ Consultas do Orbitinho sobre projetos ou pedidos de uma pessoa devem depender de
 
 O plano anterior distribuía entregas de homologação, CI, página pública e Orbitinho entre as sprints. A reunião de 06/10 registrou perda de tempo por problemas de acesso e recesso. Para o marco de 11/10, o backlog passa a destacar as duas experiências que o cliente quer ver na demonstração e os bloqueios que impedem validá-las. A distinção entre **proposto**, **implementado** e **aceito** é mantida nos documentos.
 
-## Responsabilidades
+## Responsabilidades atuais
 
-Victor Barbosa Viana atua como Product Owner e Scrum Master, responsável por priorização, alinhamento, facilitação e aceite funcional. A implementação e revisão técnica ficam com os integrantes designados no backlog: Pedro Pereira, Wesley Lima Silva, Guilherme Kenzo Taba Nakamura e Thiago Brasileiro de Sousa. A atribuição operacional e o andamento ainda devem ser confirmados no quadro da equipe.
+A equipe técnica restante é formada por Wesley Lima Silva e Guilherme Kenzo Taba Nakamura. Wesley concentra CI, Sandbox, segurança, testes, backend e autorização do Orbitinho. Guilherme concentra a frente de Espaçonaves, a interface do Orbitinho e as evidências visuais. Os dois compartilham integração, regressão e preparação da demonstração.
+
+Victor Barbosa Viana permanece como Product Owner e Scrum Master, responsável por priorização, alinhamento, facilitação e aceite funcional, sem implementação. Pedro Pereira e Thiago Brasileiro de Sousa foram retirados das atribuições técnicas do novo backlog.
 
 ## Como completar as evidências
 
@@ -48,4 +51,5 @@ Antes da apresentação, a equipe deve adicionar links de PRs, commits ou ambien
 
 - Reunião com Pedro Antonio Silva e Victor Barbosa Viana em 06/10/2026, transcrita localmente em `consulta_startellite/startellite.txt`. A transcrição bruta não foi copiada para este repositório por conter dados de reunião.
 - Documentos da Entrega 1 em `consulta_startellite/docs/`, especialmente `REQUISITOS.md`, `BACKLOG.md`, `ALINHAMENTO_CLIENTE.md` e `DEFINITION_OF_DONE.md`.
+- [Relatório de modificações de Wesley](docs/RELATORIO_MODIFICACOES_WESLEY.md), copiado do arquivo fornecido pela equipe.
 - [Orientações oficiais de entregáveis da Insper Code Jr.](https://inspercodejr.github.io/material-didatico-26-2/reunioes/#1110-entrega-intermediaria-2-marco-da-metade-do-projeto).

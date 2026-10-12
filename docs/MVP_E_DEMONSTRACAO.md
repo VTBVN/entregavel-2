@@ -1,18 +1,18 @@
 # MVP ou protótipo parcial — evidências e roteiro
 
-O material didático de 11/10 exige uma versão mínima **funcional** para apresentar ao cliente. Este repositório contém a preparação documental da demonstração; não contém código de produto nem prova de um MVP funcionando. A equipe precisa fornecer a versão executável e o registro abaixo antes de apresentar este item como cumprido.
+O material didático de 11/10 exige uma versão mínima **funcional** para apresentar ao cliente. O relatório de Wesley registra CI, Sandbox, mocks, testes e uma base técnica relacionada ao perfil público. A equipe ainda precisa anexar links rastreáveis e uma versão executável. Guilherme deve preencher as evidências da parte de Espaçonaves antes de apresentar esse fluxo como concluído.
 
 ## Evidências a anexar
 
 | Campo | Valor atual |
 |---|---|
-| Repositório/branch ou PR do produto | Pendente de informação da equipe |
+| Repositório/branch ou PR do produto | Wesley e Guilherme devem adicionar os links |
 | URL de homologação ou instruções de execução | Pendente |
 | Versão ou commit demonstrado | Pendente |
 | Contas de teste fictícias, se necessárias | Pendente; não registrar senhas |
 | Captura ou vídeo do Orbitinho | Pendente |
-| Captura ou vídeo da página pública | Pendente |
-| Resultado da revisão de privacidade/autorização | Pendente |
+| Captura ou vídeo da página pública | Pendente de preenchimento por Guilherme |
+| Resultado da revisão de privacidade/autorização | Wesley relata 36 testes; anexar execução e validação de Guilherme |
 | Data, apresentador e aceite do cliente | Pendente |
 
 ## Roteiro curto para a revisão
