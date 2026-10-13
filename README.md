@@ -42,7 +42,8 @@ O plano anterior distribuía entregas de homologação, CI, página pública e O
 
 A equipe técnica da entrega final é formada por Wesley Lima Silva, Guilherme Kenzo Taba Nakamura e Pedro Pereira. Wesley e Guilherme concentram o Orbitinho, homologação, CI/CD e testes: Wesley atua principalmente no servidor, integrações e segurança; Guilherme, na interface, conhecimento, texto, voz e acessibilidade. Pedro concentra a conclusão da página pública de Espaçonaves, do fluxo de proposta e do Design System. A distribuição completa e sua rastreabilidade com o PDF estão no [backlog da entrega final](docs/BACKLOG_ENTREGA_FINAL.md).
 
-Victor Barbosa Viana permanece como Product Owner e Scrum Master, responsável por priorização, alinhamento, facilitação e aceite funcional, sem implementação. Thiago Brasileiro de Sousa permanece sem atribuição no backlog atual.
+Victor Barbosa Viana permanece como Product Owner e Scrum Master, responsável por priorização, alinhamento, facilitação e aceite funcional, sem implementação. 
+
 
 
 
