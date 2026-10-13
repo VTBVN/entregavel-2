@@ -1,6 +1,6 @@
 # MVP — implementado versus faltante
 
-Esta comparação usa como fonte principal a reunião com Pedro Antonio Silva em 06/10/2026, registrada em `../consulta_startellite/startellite.txt`. O estado da implementação vem do relatório de Wesley e do changelog de Guilherme.
+Esta comparação usa como fonte principal a reunião com Pedro Antonio Silva em 06/10/2026. O estado da implementação vem do registro consolidado em [`IMPLEMENTADO.md`](IMPLEMENTADO.md).
 
 ## Recorte pedido pelo cliente
 
@@ -25,10 +25,10 @@ Com base nas evidências atuais, o conjunto ainda deve ser apresentado como **pr
 
 | Pedido do cliente | Estado | O que foi implementado | O que falta |
 |---|---|---|---|
-| Página pública compartilhável | Implementado na `stage` | Rota SSR `/spaceships/[slug]`, canonical, OpenGraph, Twitter Card e JSON-LD; commit `e0974a9` | Anexar URL de homologação e captura da versão executada |
-| Capa/banner e imagem de perfil | Implementado na `stage` | Layout com capa e avatar, ajustes nos commits `005c7ba` e `ba9dad7` | Confirmar visualmente com captura da demonstração |
+| Página pública compartilhável | Implementado na `stage` | Rota SSR `/spaceships/[slug]`, canonical, OpenGraph, Twitter Card e JSON-LD; commit `e0974a9` | 
+| Capa/banner e imagem de perfil | Implementado na `stage` | Layout com capa e avatar, ajustes nos commits `005c7ba` e `ba9dad7` | Confirmar visualmente 
 | Nome, descrição e identidade da equipe | Implementado na `stage` | Nome, localização, números, apresentação e especialidades | Corrigir acentuação das especialidades e validar o texto final |
-| Visual escuro, azul e espacial | Parcialmente comprovado | Página segue o guia visual e possui temas claro/escuro; Design System no commit `610e9b9` | Captura ou demonstração que comprove azul, elementos espaciais e consistência visual pedidos pelo cliente |
+| Visual escuro, azul e espacial | Parcialmente comprovado | Página segue o guia visual e possui temas claro/escuro; Design System no commit `610e9b9` |
 | Dados públicos seguros | Implementado | Campos `is_public` e `slug`, view `public_spaceship_profiles`, lista branca, 404 uniforme e restrição de imagens ao Storage | Anexar execução dos testes e validar os campos finais com o cliente |
 | Ativação pública/privada pelo comandante | Implementado fora da `stage` | Branch `feat/st-019-spaceship-public-toggle`, commit `512705e`, com autorização por `commander_id` | Abrir PR, integrar à `stage` e validar; até isso ocorrer, a ativação depende do banco ou do mock |
 | Projetos e missões no portfólio | Interface sem integração | Aba Portfólio foi criada | Integrar dados reais autorizados, anonimizar clientes e tratar carregamento, vazio e erro |
@@ -46,17 +46,17 @@ Com base nas evidências atuais, o conjunto ainda deve ser apresentado como **pr
 | Navegação por voz | Faltante | Não há evidência técnica fornecida | Reutilizar as mesmas intenções do texto; falha de reconhecimento não pode abrir uma rota errada |
 | Consultar informações do próprio usuário | Faltante | Não há implementação ou teste registrado | Validar identidade no servidor e limitar projetos, pedidos e novidades ao usuário autenticado |
 | Recusar consulta sobre outras pessoas | Faltante | Requisito definido na reunião, sem evidência de teste | Adicionar autorização e teste de tentativa de acesso a dados de terceiros |
-| Perguntas sugeridas na abertura | Não implementado; bônus | Cliente classificou como bônus em 32:23 | Pode ser adiado sem bloquear o MVP |
+
 
 ## Infraestrutura e qualidade que sustentam o MVP
 
 | Item | Estado | Observação |
 |---|---|---|
-| CI com lint, typecheck, testes e build | Relatado como implementado | Wesley ainda deve anexar PR, commit e execução completa da CI |
+| CI com lint, typecheck, testes e build | Relatado como implementado | Ainda é necessário anexar PR, commit e execução completa da CI |
 | Testes da superfície pública | Relatado como implementado | Relatório informa 36 testes aprovados, incluindo privacidade e anonimização |
 | Mock sem produção | Implementado | Permite demonstração local; deve permanecer desativado em produção e ser removido ou delimitado depois |
 | Sandbox | Bloqueado externamente | Deploy pode falhar com `User not found (404)`; é necessário confirmar token, organização e projeto Vercel |
-| Testes da rota e do botão público/privado | Faltante | O changelog informa ausência de testes automatizados para a rota e `setSpaceshipPublic` |
+| Testes da rota e do botão público/privado | A validar | O registro consolidado informa testes, mas ainda faltam links e confirmação da cobertura de `setSpaceshipPublic` |
 
 ## O que falta para considerar o MVP completo
 
@@ -77,26 +77,3 @@ Com base nas evidências atuais, o conjunto ainda deve ser apresentado como **pr
 4. Adicionar testes automatizados da rota pública e de `setSpaceshipPublic`.
 5. Resolver o deploy da Vercel para apresentar a versão no Sandbox.
 
-## Evidências a anexar
-
-| Campo | Valor atual |
-|---|---|
-| Repositório/branch ou PR do produto | Commits de Guilherme registrados no changelog; Wesley ainda deve adicionar links técnicos |
-| URL de homologação ou instruções de execução | Pendente |
-| Versão ou commit demonstrado | Pendente |
-| Contas de teste fictícias, se necessárias | Pendente; não registrar senhas |
-| Captura ou vídeo do Orbitinho | Pendente; não há implementação comprovada |
-| Captura ou vídeo da página pública | Pendente de anexar; página está relatada como integrada à `stage` |
-| Resultado da revisão de privacidade/autorização | Changelog registra view pública e 404 uniforme; Wesley relata 36 testes |
-| Data, apresentador e aceite do cliente | Pendente |
-
-## Roteiro curto para a revisão
-
-1. Mostrar o estado do produto e declarar quais fluxos estão realmente disponíveis.
-2. Se o Orbitinho for implementado, fazer uma pergunta pública sobre a plataforma e verificar se a resposta corresponde à fonte aprovada. Caso contrário, declarar a frente como pendente.
-3. Se houver integração, pedir um destino por texto e, se houver suporte, por voz; observar a rota aberta ou o tratamento seguro de ambiguidade.
-4. Abrir uma Espaçonave pública com dados autorizados; mostrar capa e perfil. Mostrar Portfólio e Tripulação como abas ainda sem integração.
-5. Abrir um slug inexistente ou privado e verificar que não mostra dados internos.
-6. Encerrar com as pendências, o backlog atualizado e o que cabe até a entrega final.
-
-Use dados fictícios em demonstrações públicas. Se um fluxo não funcionar, marque-o como pendente em [Funcionalidades e aceite](FUNCIONALIDADES_E_ACEITE.md) e no [backlog](BACKLOG_ENTREGAVEL_2.md), sem substituir execução por mock estático.
